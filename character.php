@@ -1,7 +1,4 @@
 <?php
-$hero = new Character('Gordom', 'age');
-$value = array_values($hero->getAttributes());
-echo implode(',', $value);
 // 創造角色，有各種數值、擁有的技能、攻擊、施放魔法
 class Character
 {

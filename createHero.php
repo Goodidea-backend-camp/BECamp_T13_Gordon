@@ -1,12 +1,12 @@
 <?php
-require 'hero.php';
-require 'mysql.php';
+require_once 'hero.php';
+require_once 'mysql.php';
 // createHero();
 
 function createHero()
 {
     echo "請輸入新創的角色名稱：";
-    $name = fgets(STDIN);
+    $name = trim(fgets(STDIN));
     $profession = "";
     while ($profession !== "warrior" && $profession !== "mage") {
         echo "請輸入職業名稱(warrior/mage)：";
@@ -42,7 +42,6 @@ function createHero()
 
     $sql = "INSERT INTO hero (name, Profession, HP, MP, Physical_Attack, Magic_Attack, Physical_Defense, Magic_Defense, Luck, Skill, Stage)
 VALUES ('$name', '$profession', $hp, $mp, $physical_attack, $magic_attack, $physical_defense, $magic_defense, $luck, '$skill', $stage)";
-
 
     global $dblink;
     // 用mysqli_query方法執行(sql語法)將結果存在變數中
