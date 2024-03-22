@@ -25,6 +25,22 @@ class Hero extends Character
             echo "請輸入有效數字";
         }
     }
+
+    //不在規劃內，後來發現使用繼續，從資料庫拿到英雄資訊，需要重新創立該角色到php內
+    public function setAttribute($attributeArr)
+    {
+        $this->hp = $attributeArr["HP"];
+        $this->mp = $attributeArr["MP"];
+        $this->physical_attack = $attributeArr["Physical_Attack"];
+        $this->magic_attack = $attributeArr["Magic_Attack"];
+        $this->physical_defense = $attributeArr["Physical_Defense"];
+        $this->physical_defense = $attributeArr["Magic_Defense"];
+        $this->luck = $attributeArr["Luck"];
+        $this->level = $attributeArr["Level"];
+        $this->experience = $attributeArr["Experience"];
+        $this->skillLibrary = $attributeArr["Skill"];
+        $this->stage = $attributeArr["Stage"];
+    }
 }
 
 class Warrior extends Hero

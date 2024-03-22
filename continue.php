@@ -19,17 +19,21 @@ function continueGame()
     }
 
     $heroName = trim(fgets(STDIN));
-    // $sql = "select * from `hero` where `name`=" . $heroName;
-    $sql = "select * from hero where name=" . "'" . $heroName . "'";
-    // $sql = "select * from hero where name='test2'";
-    // $sql = "select * from 'hero' where 'name'=newHero";
+    $sql = "SELECT * FROM hero WHERE name='$heroName'";
+
     $result = mysqli_query($dblink, $sql);
-    $hero = mysqli_fetch_assoc($result);
+    $heroAttr = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) === 0) {
         echo '角色名字打錯摟' . PHP_EOL;
         // throw new Exception('角色名字打錯摟');
     }
-    echo implode('' . PHP_EOL, $hero);
+    echo var_dump($heroAttr);
+    $hero = new Hero($heroAttr['name'], $heroAttr['Profession']);
+    echo var_dump($hero);
+    $hero->setAttribute($heroAttr);
+    echo var_dump($hero);
+    // $hero->printAttributes();
+
 
 
 
