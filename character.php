@@ -6,10 +6,10 @@ class Character
     public $profession;
     public $hp = 10;
     public $mp = 10;
-    public $physical_attack = 3;
-    public $magic_attack = 3;
-    public $physical_defense = 1;
-    public $magic_defense = 1;
+    public $physicalAttack = 3;
+    public $magicAttack = 3;
+    public $physicalDefense = 1;
+    public $magicDefense = 1;
     public $luck = 0;
     public $level = 1;
     public $experience = 0;
@@ -26,10 +26,10 @@ class Character
             'Profession' => $this->profession,
             'HP' => $this->hp,
             'MP' => $this->mp,
-            'Physical Attack' => $this->physical_attack,
-            'Magic Attack' => $this->magic_attack,
-            'Physical Defense' => $this->physical_defense,
-            'Magic Defense' => $this->magic_defense,
+            'PhysicalAttack' => $this->physicalAttack,
+            'MagicAttack' => $this->magicAttack,
+            'PhysicalDefense' => $this->physicalDefense,
+            'MagicDefense' => $this->magicDefense,
             'Luck' => $this->luck,
             'Level' => $this->level,
             'Experience' => $this->experience,
@@ -46,13 +46,13 @@ class Character
     }
     public function physical_attack()
     {
-        return $this->physical_attack;
+        return $this->physicalAttack;
     }
     public function be_physical_attacked(int $damage)
     {
-        $hp_decreased = $damage - $this->physical_attack;
-        $this->hp -= $hp_decreased;
-        return $hp_decreased;
+        $hpDecreased = $damage - $this->physicalAttack;
+        $this->hp -= $hpDecreased;
+        return $hpDecreased;
         // echo "受到 $hp_decreased 傷害";
     }
 }
