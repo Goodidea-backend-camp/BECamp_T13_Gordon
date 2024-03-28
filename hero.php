@@ -7,16 +7,16 @@ class Hero extends Character
     public function addAttribute($attribute)
     {
         if ($attribute == 1) {
-            $this->physical_attack++;
+            $this->physicalAttack++;
             echo "增加物理攻擊";
         } elseif ($attribute == 2) {
-            $this->magic_attack++;
+            $this->magicAttack++;
             echo "增加魔法攻擊";
         } elseif ($attribute == 3) {
-            $this->physical_defense++;
+            $this->physicalDefense++;
             echo "增加物理防禦";
         } elseif ($attribute == 4) {
-            $this->magic_defense++;
+            $this->magicDefense++;
             echo "增加魔法防禦";
         } elseif ($attribute == 5) {
             $this->luck++;
@@ -31,10 +31,10 @@ class Hero extends Character
     {
         $this->hp = $attributeArr["HP"];
         $this->mp = $attributeArr["MP"];
-        $this->physical_attack = $attributeArr["Physical_Attack"];
-        $this->magic_attack = $attributeArr["Magic_Attack"];
-        $this->physical_defense = $attributeArr["Physical_Defense"];
-        $this->physical_defense = $attributeArr["Magic_Defense"];
+        $this->physicalAttack = $attributeArr["Physical_Attack"];
+        $this->magicAttack = $attributeArr["Magic_Attack"];
+        $this->physicalDefense = $attributeArr["Physical_Defense"];
+        $this->physicalDefense = $attributeArr["Magic_Defense"];
         $this->luck = $attributeArr["Luck"];
         $this->level = $attributeArr["Level"];
         $this->experience = $attributeArr["Experience"];
@@ -52,5 +52,3 @@ class Mage extends Hero
 {
     public $magic_attack = 5;
 }
-
-?>

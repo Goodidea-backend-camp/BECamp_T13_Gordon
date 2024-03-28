@@ -4,7 +4,8 @@
 require_once 'createHero.php';
 require_once 'continue.php';
 
-startGame();
+// startGame();
+continueGame();
 
 function startGame()
 {

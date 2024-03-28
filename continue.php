@@ -1,8 +1,8 @@
 <?php
 require_once 'hero.php';
 require_once 'mysql.php';
-continueGame();
-// continueGame($hero);
+
+
 function continueGame()
 {
     echo "選擇你的角色名稱" . PHP_EOL;
@@ -25,17 +25,12 @@ function continueGame()
     $heroAttr = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) === 0) {
         echo '角色名字打錯摟' . PHP_EOL;
-        // throw new Exception('角色名字打錯摟');
+        throw new Exception('角色名字打錯摟');
     }
-    echo var_dump($heroAttr);
     $hero = new Hero($heroAttr['name'], $heroAttr['Profession']);
-    echo var_dump($hero);
     $hero->setAttribute($heroAttr);
-    echo var_dump($hero);
-    // $hero->printAttributes();
-
-
-
+    echo "你的英雄能力";
+    $hero->printAttributes();
 
     echo "數字選擇 1.進到下一關 2.存擋 3.查看目前英雄能力：";
     $start = fgets(STDIN);
@@ -44,7 +39,7 @@ function continueGame()
     } else if ($start == 2) {
         // save();
     } else if ($start == 3) {
-        // $hero->printAttributes();
+        $hero->printAttributes();
     } else {
         echo "請輸入1/2/3";
     }

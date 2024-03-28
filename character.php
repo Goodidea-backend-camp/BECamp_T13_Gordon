@@ -19,7 +19,7 @@ class Character
         $this->name = $name;
         $this->profession = $profession;
     }
-    public function getAttributes()
+    public function getAttributes(): array
     {
         return [
             'Name' => $this->name,
@@ -33,7 +33,7 @@ class Character
             'Luck' => $this->luck,
             'Level' => $this->level,
             'Experience' => $this->experience,
-            'Skill' => implode(', ', $this->skillLibrary)
+            // 'Skill' => implode(', ', $this->skillLibrary)
         ];
     }
 

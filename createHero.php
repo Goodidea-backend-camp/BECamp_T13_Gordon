@@ -29,10 +29,10 @@ function createHero()
 
     $hp = $hero->hp;
     $mp = $hero->mp;
-    $physical_attack = $hero->physical_attack;
-    $magic_attack = $hero->magic_attack;
-    $physical_defense = $hero->physical_defense;
-    $magic_defense = $hero->magic_defense;
+    $physical_attack = $hero->physicalAttack;
+    $magic_attack = $hero->magicAttack;
+    $physical_defense = $hero->physicalDefense;
+    $magic_defense = $hero->magicDefense;
     $luck = $hero->luck;
     $skill = "Slash";
     $stage = $hero->stage;
@@ -49,4 +49,3 @@ VALUES ('$name', '$profession', $hp, $mp, $physical_attack, $magic_attack, $phys
     $dblink->close();
 
 }
-?>

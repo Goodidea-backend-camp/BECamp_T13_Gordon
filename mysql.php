@@ -22,4 +22,3 @@ if ($dblink->connect_error) {
 // // 關閉連接
 // $db->close();
 
-?>
