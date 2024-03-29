@@ -23,6 +23,5 @@ if ($dblink->connect_error) {
 
 // 在此處進行資料庫操作
 
-// // 關閉連接
-// $db->close();
+
 

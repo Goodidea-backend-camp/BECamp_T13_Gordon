@@ -6,10 +6,7 @@ require_once 'autoloader.php';
 require_once 'createHero.php';
 require_once 'continue.php';
 
-
-
 startGame();
-// continueGame();
 
 function startGame()
 {
@@ -17,7 +14,7 @@ function startGame()
     $start = fgets(STDIN);
     if ($start == 1) {
         echo "你要選擇的角色是？";
-        // continueGame($hero);
+        continueGame();
     } else if ($start == 2) {
         createHero();
         echo "你已創好角色，請選擇繼續。";
