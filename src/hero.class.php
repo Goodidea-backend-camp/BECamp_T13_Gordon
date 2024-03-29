@@ -1,5 +1,4 @@
 <?php
-require 'character.php';
 
 class Hero extends Character
 {
@@ -43,12 +42,4 @@ class Hero extends Character
     }
 }
 
-class Warrior extends Hero
-{
-    public $hp = 20;
-    public $physical_attack = 5;
-}
-class Mage extends Hero
-{
-    public $magic_attack = 5;
-}
+

@@ -1,5 +1,5 @@
 <?php
-require_once 'hero.php';
+
 require_once 'mysql.php';
 
 

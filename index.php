@@ -1,11 +1,15 @@
 <!-- 開始遊戲 -->
 
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+require_once 'autoloader.php';
 require_once 'createHero.php';
 require_once 'continue.php';
 
-// startGame();
-continueGame();
+
+
+startGame();
+// continueGame();
 
 function startGame()
 {
