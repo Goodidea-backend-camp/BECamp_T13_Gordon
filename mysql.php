@@ -1,10 +1,14 @@
 <?php
 
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // 資料庫連接資訊
 
-$servername = "localhost";
-$username = "root";
-$password = "Gordonhsu";
+$servername = $_ENV['DataBaseServername'];
+$username = $_ENV['DataBaseUsername'];
+$password = $_ENV['DataBasePassword'];
 $dbname = "game";
 
 // 建立連接
