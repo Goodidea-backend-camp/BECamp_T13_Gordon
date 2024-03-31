@@ -50,7 +50,7 @@ class Character
     }
     public function be_physical_attacked(int $damage)
     {
-        $hpDecreased = $damage - $this->physicalAttack;
+        $hpDecreased = $damage - $this->physicalDefense;
         $this->hp -= $hpDecreased;
         return $hpDecreased;
         // echo "受到 $hp_decreased 傷害";
